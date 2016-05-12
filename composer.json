@@ -1,8 +1,8 @@
 {
-  "name": "moodlerooms/moodle-coding-standard",
-  "description": "Moodle CodeSniffer Standards",
+  "name": "POETGroup/poet-coding-standard",
+  "description": "POET CodeSniffer Standards",
   "keywords": [
-    "moodle",
+    "poet",
     "codesniffer"
   ],
   "type": "library",
