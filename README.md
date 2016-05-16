@@ -1,7 +1,7 @@
 # Introduction
 
 This project is simply a way to package up and distribute the POET Coding Standard which is defined in the
-following project: [poet-coding-standard](https://github.com/POETGroup/poet-coding-standard)
+following project: [poet-coding-standard](https://github.com/poetgroup/poet-coding-standard)
 
 This project does not attempt to do anything else.  If there are problems with the standard, then the problems should
 be addressed in the `poet-coding-standard` project.  Once the problem is fixed, it can be synced from
@@ -37,7 +37,7 @@ The sniffs check for the following:
 Just add it to your project's `composer.json` file (`--dev` is optional based on your needs):
 
 ```
-composer require --dev POETGroup/poet-coding-standard
+composer require --dev poetgroup/poet-coding-standard
 ```
 
 # Usage
@@ -52,7 +52,7 @@ vendor/bin/phpcs --standard=POET /path/to/moodle/plugin
 # Credits
 
 All praise should go to the contributors of
-[poet-coding-standard](https://github.com/POETGroup/poet-coding-standard)
+[poet-coding-standard](https://github.com/poetgroup/poet-coding-standard)
 
 # License
 
