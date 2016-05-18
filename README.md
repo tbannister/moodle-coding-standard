@@ -1,13 +1,9 @@
 # Introduction
 
-This project is simply a way to package up and distribute the POET Coding Standard which is defined in the
-following project: [poet-coding-standard](https://github.com/poetgroup/poet-coding-standard)
+This is the POET Group's coding standard.  This standard is primarily focused on assisting with code reviews.  For
+example, warning the code reviewer about potential security or performance problems.
 
-This project does not attempt to do anything else.  If there are problems with the standard, then the problems should
-be addressed in the `poet-coding-standard` project.  Once the problem is fixed, it can be synced from
-`poet-coding-standard` into this project.
-
-The sniffs check for the following:
+This coding standard checks for the following:
  - the presence of ini_set in PHP files;
  - unconditional if statements;
  - FixMe or ToDo in code;
@@ -29,9 +25,6 @@ The sniffs check for the following:
  - looks for the use of RAWPARAM;
  - looks for the use of Superglobals;
 
-
-
-
 # Install
 
 Just add it to your project's `composer.json` file (`--dev` is optional based on your needs):
@@ -49,10 +42,19 @@ the CodeSniffer command and the path to the `moodle` directory of this project:
 vendor/bin/phpcs --standard=POET /path/to/moodle/plugin
 ```
 
-# Credits
+# Testing
 
-All praise should go to the contributors of
-[poet-coding-standard](https://github.com/poetgroup/poet-coding-standard)
+In order to run the unit tests, you must ensure that you install from source otherwise, testing code from
+PHP_CodeSniffer would be missing.  Here is an example of re-installing dependencies and running tests:
+
+```
+rm -rf vendor/
+composer install --prefer-source
+vendor/bin/phpunit
+```
+
+Please also know that any **new** tests added need the `@group poet` annotation added.  This ensures that only tests
+from the `POET` standard are run.
 
 # License
 
