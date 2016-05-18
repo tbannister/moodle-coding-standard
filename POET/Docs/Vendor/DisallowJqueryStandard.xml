@@ -6,7 +6,7 @@
    * @license   https://www.gnu.org/copyleft/gpl.html GPLv3
    */
 -->
-<documentation title="Disallow Manual Inclusion of jQuery">
+<documentation title="Manual Inclusion of jQuery">
   <standard>
     <![CDATA[
     Including jQuery and associated libraries manually can cause issues. The versions bundled with Moodle should be used.
