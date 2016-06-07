@@ -34,11 +34,18 @@ class POET_Tests_Performance_LoopedFunctionUnitTest extends AbstractSniffUnitTes
      */
     protected function getWarningList()
     {
-        return [
-            8 => 1,
-            14 => 1,
-            20 => 1,
-            26 => 1,
+        $warnings = [
+            8  => 1,
+            13 => 1,
+            18 => 1,
+            23 => 1,
         ];
+
+        // Warnings for the long list of function calls at the end of the .inc file.
+        for ($i = 28; $i <= 65; $i++) {
+            $warnings[$i] = 1;
+        }
+
+        return $warnings;
     }
 }
