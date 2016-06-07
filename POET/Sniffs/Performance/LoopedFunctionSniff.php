@@ -45,7 +45,48 @@ class POET_Sniffs_Performance_LoopedFunctionSniff extends PHP_CodeSniffer_Standa
         $tokens = $phpcsFile->getTokens();
         $name = $tokens[$stackPtr]['content'];
         // These Moodle function should not be called inside of a loop.
-        $slowfunctions = array('get_records', 'event_trigger');
+        $slowfunctions = array(
+            'execute',
+            'get_recordset',
+            'get_recordset_list',
+            'get_recordset_select',
+            'get_recordset_sql',
+            'export_table_recordset',
+            'get_records',
+            'get_records_list',
+            'get_records_select',
+            'get_records_sql',
+            'get_records_menu',
+            'get_records_select_menu',
+            'get_records_sql_menu',
+            'get_record',
+            'get_record_select',
+            'get_record_sql',
+            'get_field',
+            'get_field_select',
+            'get_field_sql',
+            'get_fieldset_select',
+            'get_fieldset_sql',
+            'insert_record_raw',
+            'insert_record',
+            'insert_records',
+            'import_record',
+            'update_record_raw',
+            'update_record',
+            'set_field',
+            'set_field_select',
+            'count_records',
+            'count_records_select',
+            'count_records_sql',
+            'record_exists',
+            'record_exists_select',
+            'record_exists_sql',
+            'delete_records',
+            'delete_records_list',
+            'delete_records_select',
+            'replace_all_text',
+            'event_trigger',
+        );
 
         foreach ($slowfunctions as $function) {
             if ($name === $function) {
