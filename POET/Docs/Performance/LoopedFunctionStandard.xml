@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation title="Looping Over Slow Functions">
+    <standard>
+    <![CDATA[
+    Usage of slow functions from within loops could lead to performance problems.  Often times, database queries in
+    loops can be removed from the loop and rewritten to grab the data in a single query.
+    ]]>
+    </standard>
+</documentation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation title="Database Table Prefix">
+    <standard>
+        <![CDATA[
+    SQL written for Moodle should not include the table prefix.  The table name should just be passed into the
+    <em>moodle_database</em> class method or if using raw SQL, the table name should be surrounded by curly brackets.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Valid: Not using the prefix.">
+            <![CDATA[
+$DB->get_records('user', ['id' => 1]);
+$DB->get_records_sql('SELECT * FROM {user} WHERE id = ?', [1]);
+      ]]>
+        </code>
+        <code title="Invalid: Using the prefix.">
+            <![CDATA[
+$DB->get_records('mdl_user', ['id' => 1]);
+$DB->get_records_sql('SELECT * FROM mdl_user WHERE id = ?', [1]);
+      ]]>
+        </code>
+    </code_comparison>
+</documentation>

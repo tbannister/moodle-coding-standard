@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation title="Modifying PHP Configuration Settings">
+    <standard>
+        <![CDATA[
+    Cannot use the <em>ini_set</em> PHP function.  This can cause unexpected behavior.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Valid: Use Moodle method to modify PHP settings.">
+            <![CDATA[
+raise_memory_limit(MEMORY_HUGE);
+      ]]>
+        </code>
+        <code title="Invalid: Directly calling ini_set.">
+            <![CDATA[
+ini_set('memory_limit', '1G');
+      ]]>
+        </code>
+    </code_comparison>
+</documentation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation title="Superglobals">
+    <standard>
+        <![CDATA[
+    Not allowed to read values from PHP superglobals like <em>$_GET</em>, <em>$_POST</em>, etc.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Valid: Use Moodle methods to access request data.">
+            <![CDATA[
+$id = required_param('id', PARAM_INT);
+$action = optional_param('action', 'default', PARAM_ALPHANUMEXT);
+      ]]>
+        </code>
+        <code title="Invalid: Use of $_GET.">
+            <![CDATA[
+$id = $_GET['id'];
+$action = !empty($_GET['action']) ? $_GET['action'] : 'default';
+      ]]>
+        </code>
+    </code_comparison>
+</documentation>

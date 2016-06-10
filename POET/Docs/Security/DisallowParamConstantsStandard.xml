@@ -6,10 +6,10 @@
    * @license   https://www.gnu.org/copyleft/gpl.html GPLv3
    */
 -->
-<documentation title="Disallow Deprecated PARAM_ Constants">
+<documentation title="Deprecated Parameter Constants">
     <standard>
         <![CDATA[
-    The PARAM_ constants within Moodle are used for cleaning parameters. Deprecated constants should not be used.
+    The constants prefixed with <em>PARAM_</em> within Moodle are used for cleaning parameters. Deprecated constants should not be used.
     Always try to use the most specific constant possible, EG: PARAM_TEXT instead of PARAM_CLEAN.
     ]]>
     </standard>
