@@ -48,24 +48,23 @@ class POET_Sniffs_Security_WarnSqlFunctionsSniff implements PHP_CodeSniffer_Snif
         }
 
         // Find the name of the function.
-        $functionPtr = $phpcsFile->findNext(
-            T_STRING,
-            $stackPtr,
-            null,
-            false,
-            null,
-            true
-        );
+        $functionPtr = $phpcsFile->findNext(T_STRING, $stackPtr, null, false, null, true);
+
+        if ($functionPtr === false) {
+            return; // Failed to find the function call.
+        }
 
         // Add a warning for functions that take raw sql.
         $function = $tokens[$functionPtr]['content'];
 
-        if ((strrpos($function, '_sql') + 4) === strlen($function)) {
+        $sqlPos = strrpos($function, '_sql');
+        if ($sqlPos !== false && ($sqlPos + 4) === strlen($function)) {
             $this->_addWarning($function, $phpcsFile, $stackPtr);
             return;
         }
 
-        if ((strrpos($function, '_sql_menu') + 9) === strlen($function)) {
+        $menuPos = strrpos($function, '_sql_menu');
+        if ($menuPos !== false && ($menuPos + 9) === strlen($function)) {
             $this->_addWarning($function, $phpcsFile, $stackPtr);
             return;
         }

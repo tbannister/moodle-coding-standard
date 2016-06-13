@@ -18,3 +18,7 @@ $DB->get_field_sql($sql, $params, $strictness);
 $DB->get_fieldset_sql($sql, $params);
 $DB->execute($sql, $parms);
 $DB->get_recordset_sql($sql, $params, $limitfrom, $limitnum);
+
+// Should not cause a warning.
+$DB->set_field('table', 'new_field', 'new_value');
+$DB->get_field('table', 'field');
