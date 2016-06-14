@@ -10,7 +10,7 @@
   <standard>
     <![CDATA[
     Moodle provides a number of helper functions for accessing the database, including some functions that allow
-    the use of raw SQL. This can be problematic if the SQL is complext, inefficient, or includes parameters
+    the use of raw SQL. This can be problematic if the SQL is complex, inefficient, or includes parameters
     correctly. For this reason, this sniff warns about the use of these functions for further investigation.
     ]]>
   </standard>
