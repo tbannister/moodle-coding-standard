@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  /**
+   * @author    Corey Wallis <corey.wallis@blackboard.com>
+   * @copyright 2015 Blackboard Inc.
+   * @license   https://www.gnu.org/copyleft/gpl.html GPLv3
+   */
+-->
+<documentation title="Manual Inclusion of jQuery">
+  <standard>
+    <![CDATA[
+    Including jQuery and associated libraries manually can cause issues. The versions bundled with Moodle should be used.
+    ]]>
+  </standard>
+  <code_comparison>
+    <code title="Valid: Use Moodle's JQuery library.">
+      <![CDATA[
+$PAGE->requires->jquery();
+      ]]>
+    </code>
+    <code title="Invalid: Using your own JQuery library.">
+      <![CDATA[
+$PAGE->requires->js('/mod/foo/jquery.js');
+      ]]>
+    </code>
+  </code_comparison>
+</documentation>

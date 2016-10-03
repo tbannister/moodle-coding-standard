@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation title="Request Variables">
+    <standard>
+        <![CDATA[
+    Some request variables are not reliable or have been removed in later versions of PHP.  Usage of them should
+    be avoided.
+    ]]>
+    </standard>
+</documentation>
