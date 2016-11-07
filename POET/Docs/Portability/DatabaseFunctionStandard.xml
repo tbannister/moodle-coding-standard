@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation title="Built In Database Methods">
+    <standard>
+        <![CDATA[
+    Moodle comes with its own database layer.  The base class is <em>moodle_database</em>
+    and it is accessed by the <em>$DB</em> global variable.  This layer takes care of supporting
+    various database backends.  All interactions with the database must go through this class.
+    ]]>
+    </standard>
+</documentation>

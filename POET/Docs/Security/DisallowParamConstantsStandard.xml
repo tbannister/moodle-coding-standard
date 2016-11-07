@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  /**
+   * @author    Corey Wallis <corey.wallis@blackboard.com>
+   * @copyright 2015 Blackboard Inc.
+   * @license   https://www.gnu.org/copyleft/gpl.html GPLv3
+   */
+-->
+<documentation title="Deprecated Parameter Constants">
+    <standard>
+        <![CDATA[
+    The constants prefixed with <em>PARAM_</em> within Moodle are used for cleaning parameters. Deprecated constants should not be used.
+    Always try to use the most specific constant possible, EG: PARAM_TEXT instead of PARAM_CLEAN.
+    ]]>
+    </standard>
+</documentation>
