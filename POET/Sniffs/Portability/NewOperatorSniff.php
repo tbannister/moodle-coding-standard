@@ -26,7 +26,7 @@ class POET_Sniffs_Portability_NewOperatorSniff implements PHP_CodeSniffer_Sniff
      * @return array
      */
     public function register() {
-        return array(T_SPACESHIP, T_INLINE_THEN);
+        return array(T_SPACESHIP,T_COALESCE);
     }//end register()
 
     /**
@@ -40,14 +40,9 @@ class POET_Sniffs_Portability_NewOperatorSniff implements PHP_CodeSniffer_Sniff
             $warning = 'Spaceship operators should only be used in PHP 7.0 or greater. ';
             $phpcsfile->addWarning($warning, $stackptr);
         }
-        if ($optype === 'T_INLINE_THEN' ) {
-            $pretoken = $tokens[$stackptr - 1]['type'];
-            if ($pretoken === 'T_INLINE_THEN') {
-                $warning = 'Coalesce operators should only be used in PHP 7.0 or greater. ';
-                $phpcsfile->addWarning($warning, $stackptr);
-            }
-
+        if ($optype === 'T_COALESCE' ) {
+            $warning = 'Coalesce operators should only be used in PHP 7.0 or greater. ';
+            $phpcsfile->addWarning($warning, $stackptr);
         }
-
     }
 }
